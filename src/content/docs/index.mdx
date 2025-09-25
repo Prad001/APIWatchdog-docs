@@ -1,36 +1,35 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash
-hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+title: Welcome to APIWatchdog Docs
+template: doc
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+ 
 
-## Next steps
+Easily explore, analyze, and secure your APIs with powerful features.
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+  <Card title="Getting Started" icon="rocket" href="/docs/getting-started">
+    Quick setup and first steps to start using APIWatchdog.
+  </Card>
+  
+  <Card title="Discover Endpoints" icon="magnifier" href="/docs/discover-endpoints">
+    Automatically scan and catalog all API endpoints from your collections.
+  </Card>
+  
+  <Card title="Generate Specs" icon="document" href="/docs/generate-specs">
+    Create OpenAPI/Swagger specifications from your API definitions.
+  </Card>
+  
+  <Card title="Visualize Flows" icon="seti:pipeline" href="/docs/visualize-flows">
+    Understand API call sequences and data flows with interactive diagrams.
+  </Card>
+  
+  <Card title="Security Analysis" icon="seti:lock" href="/docs/security-analysis">
+    Identify vulnerabilities, misconfigurations, and risks in your APIs.
+  </Card>
+  
+  <Card title="Full Report" icon="open-book" href="/docs/full-report">
+    Export complete analysis reports for audits, compliance, or sharing.
+  </Card>
 </CardGrid>
