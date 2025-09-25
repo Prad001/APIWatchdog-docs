@@ -29,11 +29,19 @@ export default defineConfig({
         }
       ],
       head: [
-        {
-          tag: 'link',
-          attrs: { rel: 'shortcut icon', href: '/favicon.svg', type: 'image/svg+xml' }, // <-- corrected
-        },
-      ]
+  {
+    tag: 'meta',
+    attrs: {
+      'http-equiv': 'Content-Security-Policy',
+      content: "default-src 'self'; img-src 'self' data: https:; script-src 'self'; style-src 'self' 'unsafe-inline';"
+    }
+  },
+  {
+    tag: 'link',
+    attrs: { rel: 'shortcut icon', href: '/favicon.svg', type: 'image/svg+xml' }
+  }
+]
+
     }),
   ],
 });
