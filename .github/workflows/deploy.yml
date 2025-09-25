@@ -6,7 +6,7 @@ on:
       - main
 
 permissions:
-  contents: read
+  contents: write  # changed from read → write
   pages: write
   id-token: write
 
@@ -17,7 +17,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        # persist-credentials: true (default)
+        # persist-credentials: true  # default
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
