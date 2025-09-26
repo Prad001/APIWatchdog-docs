@@ -4,8 +4,8 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-  site: 'https://docs.apiwatchdog.shelkepradeep.in', // <-- your subdomain (custom domain) or the GitHub Pages URL
-  base: '/',                         // '/' for root; use '/REPO/' for project pages without custom domain
+  site: 'https://docs.apiwatchdog.shelkepradeep.in',
+  base: '/',
   integrations: [
     starlight({
       title: '',
@@ -29,20 +29,12 @@ export default defineConfig({
         }
       ],
       head: [
-  {
-    tag: 'meta',
-    attrs: {
-      'http-equiv': 'Content-Security-Policy',
-      content: "default-src 'self'; img-src 'self' data: https://docs.apiwatchdog.shelkepradeep.in; script-src 'self'; style-src 'self' 'unsafe-inline';"
-    }
-  },
-  {
-    tag: 'link',
-    attrs: { rel: 'shortcut icon', href: '/favicon.svg', type: 'image/svg+xml' }
-  }
-]
-
-
+        // Remove the CSP meta tag - only keep the favicon
+        {
+          tag: 'link',
+          attrs: { rel: 'shortcut icon', href: '/favicon.svg', type: 'image/svg+xml' }
+        }
+      ]
     }),
   ],
 });
